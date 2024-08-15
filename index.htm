@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Widget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'メイリオ', 'Meiryo', 'Noto Sans JP', sans-serif;
+            font-size: 36px;
+            color: #fff;
+            background-color: #FFF;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        #winscore,
+        #losescore,
+        #winrate {
+            margin: 16px auto;
+            width: 340px;
+            display: flex;
+            background: #FFF;
+            color: #333;
+            border-radius: 16px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        #winscore .caption { background: #007bff; }
+        #losescore .caption { background: #dc3545; }
+        #winrate .caption { background: #28a745; }
+
+        .caption {
+            width:140px;
+            font-size: 30px;
+            background: #999;
+            color: #FFF;
+            padding: 16px;
+        }
+
+        .score {
+            display: flex;
+            width: 100%;
+            font-size: 36px;
+            align-items: center;
+            justify-content: right;
+            padding-right: 24px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="winscore">
+        <div id="winnum" class="score">0</div>
+        <div class="caption">Win</div>
+    </div>
+    <div id="losescore">
+        <div id="losenum" class="score">0</div>
+        <div class="caption">Lose</div>
+    </div>
+    <div id="winrate">
+        <div id="rateScore" class="score">0%</div>
+        <div class="caption">%</div>
+    </div>
+    <button id="winButton">WIN</button>
+    <button id="loseButton">LOSE</button>
+    <button id="resetButton">RESET</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
